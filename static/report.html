@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cardio Guard – Model Report</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', sans-serif; background: #f4f6f9; color: #212121; }
+  header {
+    background: linear-gradient(135deg, #b71c1c, #ef5350 55%, #26c6da);
+    color: #fff; padding: 2rem 3rem;
+  }
+  header h1 { font-size: 2rem; font-weight: 700; }
+  header p  { opacity: .88; margin-top: .4rem; }
+  .container { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; }
+  h2 { font-size: 1.3rem; font-weight: 700; margin: 2rem 0 1rem;
+        padding-bottom: .4rem; border-bottom: 3px solid #ef5350; color: #b71c1c; }
+  table { width: 100%; border-collapse: collapse; background: #fff;
+           border-radius: 10px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,.07); }
+  th { background: #b71c1c; color: #fff; padding: .75rem 1rem; text-align: left; font-size: .85rem; }
+  td { padding: .7rem 1rem; border-bottom: 1px solid #f0f0f0; font-size: .9rem; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #fff5f5; }
+  .ens-badge { background: #ef9a9a; color: #b71c1c; font-size: .7rem; font-weight: 700;
+                padding: 1px 6px; border-radius: 4px; margin-left: 5px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+  .card { background: #fff; border-radius: 12px; padding: 1.25rem;
+           box-shadow: 0 2px 12px rgba(0,0,0,.07); }
+  .card h3 { font-size: .95rem; font-weight: 600; margin-bottom: .75rem; color: #444; }
+  .card img { width: 100%; border-radius: 6px; border: 1px solid #eee; }
+  footer { text-align: center; padding: 2rem; font-size: .8rem; color: #9e9e9e; }
+</style>
+</head>
+<body>
+<header>
+  <h1>❤️ Cardio Guard — Model Report</h1>
+  <p>Heart Disease Prediction · Ensemble Learning + XAI · BSCS ML Project 2025</p>
+</header>
+<div class="container">
+
+  <h2>Model Performance Summary</h2>
+  <table>
+    <thead><tr><th>Model</th><th>Accuracy</th><th>AUC-ROC</th><th>CV Score (5-Fold)</th></tr></thead>
+    <tbody><tr><td>Logistic Regression</td><td>0.8403</td><td>0.9041</td><td>0.8246</td></tr>
+<tr><td>Random Forest 🏆</td><td>0.9244</td><td>0.9731</td><td>0.9097</td></tr>
+<tr><td>Gradient Boosting</td><td>0.9118</td><td>0.9539</td><td>0.8834</td></tr>
+<tr><td>SVM</td><td>0.8782</td><td>0.9352</td><td>0.8582</td></tr>
+<tr><td>KNN</td><td>0.8403</td><td>0.9225</td><td>0.8508</td></tr>
+<tr><td>Decision Tree</td><td>0.8445</td><td>0.9216</td><td>0.8236</td></tr>
+<tr><td>Voting Ensemble <span class='ens-badge'>Ensemble</span></td><td>0.9076</td><td>0.9568</td><td>0.8855</td></tr>
+<tr><td>Stacking Ensemble <span class='ens-badge'>Ensemble</span></td><td>0.9244</td><td>0.9679</td><td>0.9065</td></tr>
+</tbody>
+  </table>
+
+  <h2>Visualisations & XAI Charts</h2>
+  <div class="grid">
+    
+        <div class="card">
+          <h3>Target Distribution</h3>
+          <img src="static/images/target_dist.png" alt="Target Distribution">
+        </div>
+        <div class="card">
+          <h3>Age Distribution</h3>
+          <img src="static/images/age_distribution.png" alt="Age Distribution">
+        </div>
+        <div class="card">
+          <h3>Correlation Heatmap</h3>
+          <img src="static/images/correlation_heatmap.png" alt="Correlation Heatmap">
+        </div>
+        <div class="card">
+          <h3>Model Comparison</h3>
+          <img src="static/images/model_comparison.png" alt="Model Comparison">
+        </div>
+        <div class="card">
+          <h3>Confusion Matrix</h3>
+          <img src="static/images/confusion_matrix.png" alt="Confusion Matrix">
+        </div>
+        <div class="card">
+          <h3>ROC Curves</h3>
+          <img src="static/images/roc_curves.png" alt="ROC Curves">
+        </div>
+        <div class="card">
+          <h3>Feature Importances (RF)</h3>
+          <img src="static/images/feature_importance.png" alt="Feature Importances (RF)">
+        </div>
+        <div class="card">
+          <h3>SHAP Importance</h3>
+          <img src="static/images/shap_summary.png" alt="SHAP Importance">
+        </div>
+        <div class="card">
+          <h3>SHAP Beeswarm</h3>
+          <img src="static/images/shap_beeswarm.png" alt="SHAP Beeswarm">
+        </div>
+  </div>
+
+</div>
+<footer>Cardio Guard · Dataset: heart_statlog_cleveland_hungary_final.csv · 1,190 samples · 11 features</footer>
+</body>
+</html>
