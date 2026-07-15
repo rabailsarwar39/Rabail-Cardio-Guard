@@ -25,6 +25,7 @@ from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
+import shap
 
 os.makedirs("data", exist_ok=True)
 os.makedirs("models", exist_ok=True)
